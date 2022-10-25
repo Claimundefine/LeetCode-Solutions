@@ -1,6 +1,6 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        res = max(nums)
+        res = nums[0]
         curMin, curMax = 1, 1
         
         for num in nums:
