@@ -10,7 +10,7 @@ class Solution:
             directions = [[0,1],[1,0],[-1,0],[0,-1]]
 
             while q:
-                curRow, curCol = q.pop()
+                curRow, curCol = q.popleft()
                 for direction in directions:
                     addRow = curRow + direction[0]
                     addCol = curCol + direction[1]
