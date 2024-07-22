@@ -7,9 +7,9 @@ class Solution:
             
         heights.sort(reverse=True)
         
-        ans = []
+        names = []
         
         for i in range(len(heights)):
-            ans.append(hashmap[heights[i]])
+            names.append(hashmap[heights[i]])
             
-        return ans
+        return names
