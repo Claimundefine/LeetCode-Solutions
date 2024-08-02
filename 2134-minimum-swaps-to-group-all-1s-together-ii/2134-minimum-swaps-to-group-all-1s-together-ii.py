@@ -9,7 +9,7 @@ class Solution:
         
         l, r = 0, 0
         
-        while r < len(nums) * 2:
+        while r < len(nums) + onesCount:
             curIdx = r % len(nums)
             
             if nums[curIdx] == 1:
