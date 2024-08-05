@@ -49,10 +49,6 @@ class LRUCache:
         self.addNode(newNode)
         
         if len(self.nodeMap) > self.capacity:
-            print(self.capacity, len(self.nodeMap))
-            print(self.tail.value)
-            print("I HAVE CANCER")
-            print(self.tail.prev.value)
             self.removeNode(self.tail.prev)
         
     
