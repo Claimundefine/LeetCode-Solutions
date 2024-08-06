@@ -13,7 +13,6 @@ class Solution:
             heap.append(-1 * hashmap[key])
             
         heapq.heapify(heap)
-        print(heap)
         
         press = 0
         letters = 0
