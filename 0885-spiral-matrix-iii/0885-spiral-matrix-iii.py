@@ -1,10 +1,6 @@
 class Solution:
     def spiralMatrixIII(self, rows: int, cols: int, rStart: int, cStart: int) -> List[List[int]]:
         
-        matrix = [[0] * cols for _ in range(rows)]
-        
-        matrix[rStart][cStart] = 1
-        
         curR, curC = rStart, cStart
         curVal = 2
 
@@ -22,7 +18,6 @@ class Solution:
             if direction == "L":
                 curC += 1
                 if curR in range(rows) and curC in range(cols):
-                    matrix[curR][curC] = curVal
                     ans.append([curR, curC])
                     curVal += 1
                 if numMove == numShift:
@@ -31,7 +26,6 @@ class Solution:
             elif direction == "D":
                 curR += 1
                 if curR in range(rows) and curC in range(cols):
-                    matrix[curR][curC] = curVal
                     ans.append([curR, curC])
                     curVal += 1
                 if numMove == numShift:
@@ -41,7 +35,6 @@ class Solution:
             elif direction == "R":
                 curC -= 1
                 if curR in range(rows) and curC in range(cols):
-                    matrix[curR][curC] = curVal
                     ans.append([curR, curC])
                     curVal += 1
                 if numMove == numShift:
@@ -50,7 +43,6 @@ class Solution:
             else:
                 curR -= 1
                 if curR in range(rows) and curC in range(cols):
-                    matrix[curR][curC] = curVal
                     ans.append([curR, curC])
                     curVal += 1
                 if numMove == numShift:
