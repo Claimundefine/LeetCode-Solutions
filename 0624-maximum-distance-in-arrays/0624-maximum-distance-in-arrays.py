@@ -5,11 +5,8 @@ class Solution:
         low = float("inf")
         
         for i in range(len(arrays)):
-            curHigh = float("-inf")
-            curLow = float("inf")
-            for num in arrays[i]:
-                curHigh = max(num, curHigh)
-                curLow = min(num, curLow)
+            curLow = arrays[i][0]
+            curHigh = arrays[i][-1]
             if i > 0:
                 distance = max(abs(high-curLow), abs(low-curHigh), distance)
             high = max(high, curHigh)
