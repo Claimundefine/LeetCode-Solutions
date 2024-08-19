@@ -12,6 +12,6 @@ class Solution:
                     print(i, j, i // j)
                     divisor = i // j
                     dp[i] = min(dp[i], dp[j] + divisor)
-        print(dp)
+
         return dp[-1]
                 
