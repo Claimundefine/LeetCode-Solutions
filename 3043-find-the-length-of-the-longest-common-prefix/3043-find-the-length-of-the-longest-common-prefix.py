@@ -6,12 +6,11 @@ class TrieNode:
 class Solution:
     def longestCommonPrefix(self, arr1: List[int], arr2: List[int]) -> int:
         trie = TrieNode()
-        arr1 = [str(x) for x in arr1]
-        arr2 = [str(x) for x in arr2]
     
-        def addToTrie(val):
+        def addToTrie(a):
         
             cur = trie
+            val = str(a)
         
             for char in val:
                 if char not in cur.children:
@@ -23,7 +22,8 @@ class Solution:
         
         maxVal = 0
     
-        for val in arr2:
+        for a in arr2:
+            val = str(a)
             cur = trie
         
             for i in range(len(val)):
